@@ -1,0 +1,28 @@
+{
+   "$schema": "node_modules/wrangler/config-schema.json",
+   "name": "sync",
+   "main": "src/index.ts",
+   "compatibility_date": "2025-02-04",
+   "compatibility_flags": ["nodejs_compat"],
+   "workers_dev": true,
+   "minify": true,
+   "assets": {
+      "directory": "node_modules/bknd/dist/static"
+   },
+   "observability": {
+      "enabled": true
+   },
+   "d1_databases": [
+      {
+         "binding": "DB",
+         "database_name": "sync",
+         "database_id": "c7c192f1-51fe-4902-aff9-a5967ee061b5"
+      }
+   ],
+   "r2_buckets": [
+      {
+         "binding": "BUCKET",
+         "bucket_name": "sync"
+      }
+   ]
+}
